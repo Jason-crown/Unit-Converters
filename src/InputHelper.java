@@ -32,3 +32,18 @@ public class InputHelper {
             }
         }
     }
+
+    public double readDouble(String prompt) {
+        while (true) {
+            System.out.print(prompt);
+
+            String input = scanner.nextLine();
+
+            try {
+                return Double.parseDouble(input);
+
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter a valid number.");
+            }
+        }
+    }
