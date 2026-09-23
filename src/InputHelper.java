@@ -47,3 +47,22 @@ public class InputHelper {
             }
         }
     }
+
+    public boolean askToContinue() {
+        while (true) {
+            System.out.print("\nWould you like to perform another conversion? (y/n): ");
+
+            String input = scanner.nextLine().trim().toLowerCase();
+
+            if (input.equals("y") || input.equals("yes")) {
+                return true;
+            }
+
+            if (input.equals("n") || input.equals("no")) {
+                return false;
+            }
+
+            System.out.println("Please enter y or n.");
+        }
+    }
+}
